@@ -468,6 +468,129 @@ h1 .script {
     border-radius: 20px;
 }
 
+/* ---------------- Projets ---------------- */
+.section-sub code {
+    background: var(--blush-soft);
+    color: var(--terracotta-dark);
+    padding: 0.1rem 0.45rem;
+    border-radius: 6px;
+    font-size: 0.9em;
+    font-family: monospace;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+.projects-status {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: var(--plum-muted);
+    font-weight: 600;
+    padding: 2rem 0;
+}
+
+.project-card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    background: var(--cream-soft);
+    border: 1px solid var(--border);
+    aspect-ratio: 4 / 5;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-soft);
+}
+
+.project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.06);
+}
+
+.project-card figcaption {
+    position: absolute;
+    inset: auto 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.9rem 1.1rem;
+    background: linear-gradient(0deg, rgba(74, 59, 69, 0.85) 0%, rgba(74, 59, 69, 0) 100%);
+    color: var(--white);
+    font-weight: 700;
+    font-size: 0.92rem;
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.project-card:hover figcaption {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-card figcaption i {
+    width: 18px;
+    height: 18px;
+}
+
+/* Visionneuse plein écran */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(42, 30, 36, 0.92);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+    z-index: 1000;
+}
+
+.lightbox.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.lightbox img {
+    max-width: min(900px, 100%);
+    max-height: 85vh;
+    border-radius: 16px;
+    box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.15);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.lightbox-close:hover { background: rgba(255, 255, 255, 0.3); }
+
 /* ---------------- Logiciels ---------------- */
 .software-grid {
     display: grid;

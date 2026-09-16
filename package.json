@@ -4,7 +4,7 @@
   "private": true,
   "description": "Portfolio de Manuella — Infographie, Web Design & Motion Design.",
   "scripts": {
-    "build": "node scripts/build-manifest.js",
+    "generate-manifest": "node scripts/build-manifest.js",
     "dev": "vercel dev"
   }
 }

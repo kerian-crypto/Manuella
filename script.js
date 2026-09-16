@@ -39,7 +39,7 @@ document.querySelectorAll('.reveal, .skill-bar').forEach(observeReveal);
 //    ajoutée au dossier apparaît sans toucher au code.
 // 2) Si l'API n'est pas disponible (site ouvert en simple statique),
 //    on retombe sur projects/manifest.json, regénéré via
-//    "npm run build" (node scripts/build-manifest.js).
+//    "npm run generate-manifest" (node scripts/build-manifest.js).
 // ---------------------------------------------------------------
 const projectsGrid = document.getElementById('projectsGrid');
 const lightbox = document.getElementById('lightbox');
